@@ -1,8 +1,10 @@
 var express = require('express');
 var path = require('path');
 var logger = require('morgan');
+var mongodb = require("mongodb");
 var bodyParser = require('body-parser');
 var cookieParser = require('cookie-parser');
+var mongoUri = process.env.MONGOLAB_URI || 'mongodb://localhost/testDB'
 
 
 //Require Passport
@@ -31,25 +33,42 @@ app.use(passport.initialize());
 // API routes used when path starts with /api
 app.use('/api', routesApi);
 
-app.use(function(req, res) {
+app.use(function (req, res) {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
-//Port 
-app.listen(8080);
+
+// Connect to the database before starting the application server.
+mongodb.MongoClient.connect(mongoUri, function (err, database) {
+  if (err) {
+    console.log(err);
+    process.exit(1);
+  }
+
+  // Save database object from the callback for reuse.
+  db = database;
+  console.log("Database connection ready");
+
+  // Initialize the app.
+  var server = app.listen(process.env.PORT || 8080, function () {
+    var port = server.address().port;
+    console.log("App now running on port", port);
+  });
+});
+
 
 // Errors
 
-app.use(function(req, res, next) {
-    var err = new Error('Not Found');
-    err.status = 404;
-    next(err);
+app.use(function (req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
 });
 
 app.use(function (err, req, res, next) {
   if (err.name === 'UnauthorizedError') {
     res.status(401);
-    res.json({"message" : err.name + ": " + err.message});
+    res.json({ "message": err.name + ": " + err.message });
   }
 });
 
