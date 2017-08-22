@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="testApp">
+
+<head>
+  <title>testApp</title>
+  <base href="/">
+  <link rel="stylesheet" href="./content/css/flatly.css">
+  <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+</head>
+
+<body ng-view>
+ 
+
+  <script src="lib/angular/angular.min.js"></script>
+  <script src="lib/angular/angular-route.min.js"></script>
+
+  <script src="main.js"></script>
+
+
+
+  <script src="./profile/profile.controller.js"></script>
+
+  <script src="./home/home.controller.js"></script>
+
+  <script src="./common/directives/navigation/navigation.controller.js"></script>
+  <script src="./common/directives/navigation/navigation.directive.js"></script>
+
+  <script src="./common/services/authentication.service.js"></script>
+  <script src="./common/services/userService.js"></script>
+  <script src="./auth/login/login.controller.js"></script>
+  <script src="./auth/register/register.controller.js"></script>
+  <script src="./common/services/logoutService.js"></script>
+</body>
+
+</html>

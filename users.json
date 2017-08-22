@@ -1,0 +1,8 @@
+[
+  {
+    "hash" : "3c3d181b525240a29b86d3e47029ceae459ab98d167d6ec6a180adf7efdf1de8b920678e7ba554f9ea13392e58c4d6612a60c74fab8f763842e13f719ddafd4f", 
+    "salt" : "01231c7f1aa37dbf2059f4552597b824", 
+    "email" : "john.doe@gmail.com", 
+    "name" : "John Doe"
+  }  
+]

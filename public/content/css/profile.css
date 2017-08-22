@@ -1,0 +1,149 @@
+#container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.navbar {
+  margin-bottom: 5px !important;
+}
+
+h3 {
+  color: #cb999a;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h4.infoTag {
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+p.courses {
+  text-align: center;
+  font-size: 20px;
+  padding-top: 80px;
+  padding-bottom: 230px;
+  color: #cb999a;
+}
+
+cite {
+  color: #646060;
+}
+
+small {
+  display: block;
+  line-height: 1.428571429;
+  color: #999;
+}
+
+.glyphicon.margin {
+  margin-bottom: 10px;
+  margin-right: 10px;
+}
+
+img {
+  height: 120px;
+  width: 120px;
+  margin-left: 15px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+ul.chartList {
+  list-style-type: none;
+}
+
+li.chartList {
+  text-align: left;
+  padding: 3px;
+  margin-top: 2px;
+}
+
+span.infoTag {
+  display: inline-block;
+  text-align: left;
+  padding: 2px;
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+.well {
+  box-shadow: 5px 5px 10px 2px #e6e6e6;
+  min-height: 160px;
+}
+
+.well.pie {
+  background-color: rgba(138, 20, 20, 0.28);
+  float: right;
+  width: 330px;
+  max-height: 500px;
+  box-shadow: 5px 5px 10px 2px #e6e6e6;
+  padding: 10px;
+  margin: auto;
+}
+
+fusioncharts {
+  margin-bottom: 600px;
+}
+
+/*TABLE*/
+
+table {
+  width: 96%;
+  margin: 10px auto;
+  box-shadow: 5px 5px 10px 2px #e6e6e6;
+  margin-bottom: 30px;
+}
+
+caption {
+  font-size: 1.6em;
+  font-weight: 400;
+  padding: 10px 0;
+  color: #cb999a;
+}
+
+thead th {
+  font-weight: 400;
+  background: #cb999a;
+  color: #fff;
+}
+
+tr {
+  background: #f4f7f8;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 5px;
+}
+
+tr:nth-child(even) {
+  background: rgba(192, 192, 192, 0.29);
+}
+
+th,
+td {
+  text-align: left;
+  padding: 15px;
+  font-weight: 300;
+}
+
+tfoot tr {
+  background: none;
+}
+
+tfoot td {
+  padding: 10px 2px;
+  font-size: 0.8em;
+  font-style: italic;
+  color: #cb999a;
+}
+
+.chart {
+  margin-top: 30px;
+}
+.chartInfo {
+  margin-top: 30px;
+  color: rgba(116, 9, 9, 0.65);
+}
